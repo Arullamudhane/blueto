@@ -1,0 +1,14 @@
+.timeline-container {
+    display: flex;
+
+    /* justify-content: space-between; */
+}
+
+.sec2 {
+    height: inherit;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}

@@ -1,10 +1,12 @@
 import { useGSAP } from "@gsap/react";
 import React, { useRef } from "react";
 import { animateWithGsap } from "../utils/animation";
+import "./Features.css";
 
 import gsap from "gsap";
 import { dots } from "../assets";
 import AnimatedCounter from "./AnimatedCounter";
+import SwingImage from "../pages/SwingImage";
 
 const Features = () => {
   useGSAP(() => {
@@ -26,18 +28,18 @@ const Features = () => {
       ease: "power2.inOut",
       duration: 1,
     });
-    animateWithGsap(".g_box", {
-      y: 0,
-      opacity: 1,
-      ease: "bounce.out",
-      duration: 1,
-    });
-    animateWithGsap(".g_line", {
-      y: 0,
-      opacity: 1,
-      ease: "power2.inOut",
-      duration: 1,
-    });
+    // animateWithGsap(".g_box", {
+    //   y: 0,
+    //   opacity: 1,
+    //   ease: "bounce.out",
+    //   duration: 1,
+    // });
+    // animateWithGsap(".g_line", {
+    //   y: 0,
+    //   opacity: 1,
+    //   ease: "power2.inOut",
+    //   duration: 1,
+    // });
   }, []);
 
   return (
@@ -129,18 +131,18 @@ const Features = () => {
       {/* yyyyyyy */}
 
       <div
-        class='space-y-8 relative overflow-hidden mt-[5rem]  flex flex-col items-center justify-center h-screen
+        class='timeline-container space-y-8 relative overflow-hidden mt-[5rem]  
       border border-blue-300 p-5 rounded-md shadow-custom-red'
       >
-        <div className='sec1'>
-          <div className='absolute inset-0 flex justify-center mr-[9rem]'>
+        <div className='sec1 relative'>
+          <div className='absolute inset-0 flex justify-center  '>
             <div className=' w-0.5 bg-gradient-to-b from-transparent via-red-300 to-green animate-lineGrow'></div>
           </div>
           {/* <div class='absolute inset-0 ml-5 translate-x-0.5 md:ml-[8.75rem] md:translate-x-0 h-[90vh] w-0.5 bg-gradient-to-b from-transparent via-red-300 to-green animate-lineGrow'></div> */}
           <div class='reusecard relative opacity-0 animate-fadeInLeft animation-delay-100'>
             <div class='md:flex items-center md:space-x-4 mb-3'>
               <div class='flex items-center space-x-4 md:space-x-2 md:space-x-reverse'>
-                <div class='flex items-center justify-center w-10 h-10 rounded-full bg-white shadow md:order-1 ml-[7.6rem]'>
+                <div class='flex items-center justify-center w-10 h-10 rounded-full bg-white shadow md:order-1 ml-[16.5rem]'>
                   <svg
                     class='fill-emerald-500'
                     xmlns='http://www.w3.org/2000/svg'
@@ -169,7 +171,7 @@ const Features = () => {
           <div class='reusecard relative opacity-0 animate-fadeInLeft animation-delay-200'>
             <div class='md:flex items-center md:space-x-4 mb-3'>
               <div class='flex items-center space-x-4 md:space-x-2 md:space-x-reverse'>
-                <div class='flex items-center justify-center w-10 h-10 rounded-full bg-white shadow md:order-1 ml-[7.6rem]'>
+                <div class='flex items-center justify-center w-10 h-10 rounded-full bg-white shadow md:order-1 ml-[16.5rem]'>
                   <svg
                     class='fill-emerald-500'
                     xmlns='http://www.w3.org/2000/svg'
@@ -195,7 +197,7 @@ const Features = () => {
           <div class='reusecard relative opacity-0 animate-fadeInLeft animation-delay-300'>
             <div class='md:flex items-center md:space-x-4 mb-3'>
               <div class='flex items-center space-x-4 md:space-x-2 md:space-x-reverse'>
-                <div class='flex items-center justify-center w-10 h-10 rounded-full bg-white shadow md:order-1 ml-[7.6rem]'>
+                <div class='flex items-center justify-center w-10 h-10 rounded-full bg-white shadow md:order-1 ml-[16.5rem]'>
                   <svg
                     class='fill-emerald-500'
                     xmlns='http://www.w3.org/2000/svg'
@@ -220,7 +222,7 @@ const Features = () => {
           <div class='reusecard relative opacity-0 animate-fadeInLeft animation-delay-400'>
             <div class='md:flex items-center md:space-x-4 mb-3'>
               <div class='flex items-center space-x-4 md:space-x-2 md:space-x-reverse'>
-                <div class='flex items-center justify-center w-10 h-10 rounded-full bg-white shadow md:order-1 ml-[7.6rem]'>
+                <div class='flex items-center justify-center w-10 h-10 rounded-full bg-white shadow md:order-1 ml-[16.5rem]'>
                   <svg
                     class='fill-emerald-500'
                     xmlns='http://www.w3.org/2000/svg'
@@ -244,9 +246,10 @@ const Features = () => {
           {/* <div class='relative opacity-0 animate-fadeInLeft animation-delay-900'></div> */}
           {/* <div class='relative opacity-0 animate-fadeInLeft animation-delay-500'></div> */}
         </div>
-      </div>
-      <div className='sec2'>
-        <AnimatedCounter />
+        <div className='sec2 h-[20vh] w-[20vw]'>
+          <AnimatedCounter />
+          <SwingImage />
+        </div>
       </div>
 
       {/* countr */}

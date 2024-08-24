@@ -106,7 +106,6 @@ const Home = () => {
         <Features />
         <FlipCard />
         {/* <BGAnimation /> */}
-        <SwingImage />
       </div>
     </Bounded>
   );

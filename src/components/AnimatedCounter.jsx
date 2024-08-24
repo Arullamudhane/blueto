@@ -48,6 +48,9 @@ const AnimatedCounter = () => {
       <div ref={counterRef} className='counter'>
         {count}+
       </div>
+      <div ref={counterRef} className=''>
+        projects
+      </div>
     </div>
   );
 };

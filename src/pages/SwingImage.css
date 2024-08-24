@@ -4,6 +4,8 @@ body {background: #eee;}
     transform-origin: center -20px;
     float:left;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    height: 10vh;
+    width: 20vw;
 }
 .swing img {
     border: 5px solid #f8f8f8;
