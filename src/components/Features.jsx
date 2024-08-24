@@ -87,7 +87,7 @@ const Features = () => {
           <div className='feature-text-container'>
             <div className='flex-1 '>
               <p className='feature-text g_text'>
-                <p className='text-yellow-500 my-4 text-[1.7rem] font-semibold'>
+                <p className='text-gradient my-4 text-[1.7rem] font-semibold'>
                   Own Your Vision, Command the Process
                 </p>
                 From day one, you’re not just involved—you’re in charge. Your
@@ -96,7 +96,7 @@ const Features = () => {
                 compromise. You lead, we execute.
               </p>
               <p className='feature-text g_text'>
-                <p className='text-yellow-500 my-4 text-[1.7rem] font-semibold'>
+                <p className='text-gradient my-4 text-[1.7rem] font-semibold'>
                   Real-Time Updates, Full Transparency
                 </p>
                 Experience the thrill of running your own project with daily
@@ -105,7 +105,7 @@ const Features = () => {
                 is realized exactly as you envision it.
               </p>
               <p className='feature-text g_text'>
-                <p className='text-yellow-500 my-4 text-[1.7rem] font-semibold'>
+                <p className='text-gradient my-4 text-[1.7rem] font-semibold'>
                   Lead Like a CEO
                 </p>
                 Step into the role of a CEO—visit our team, drive the
@@ -114,7 +114,7 @@ const Features = () => {
                 where your decisions define the outcome.
               </p>
               <p className='feature-text g_text'>
-                <p className='text-yellow-500 my-4 text-[1.7rem] font-semibold'>
+                <p className='text-gradient my-4 text-[1.7rem] font-semibold'>
                   Why Choose Blueto? Expertise:{" "}
                 </p>
                 Our team comprises skilled professionals with in-depth knowledge
