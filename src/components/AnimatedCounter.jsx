@@ -45,12 +45,12 @@ const AnimatedCounter = () => {
 
   return (
     <div className='counter-container'>
-      <div ref={counterRef} className='counter'>
+      <h3 ref={counterRef} className='counter'>
         {count}+
-      </div>
-      <div ref={counterRef} className=''>
+      </h3>
+      <span ref={counterRef} className='project-text'>
         projects
-      </div>
+      </span>
     </div>
   );
 };

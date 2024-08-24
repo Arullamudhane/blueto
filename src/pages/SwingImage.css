@@ -6,9 +6,12 @@ body {background: #eee;}
     box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
     height: 10vh;
     width: 20vw;
+    /* background-color: #eee; */
 }
 .swing img {
-    border: 5px solid #f8f8f8;
+    border: 3px solid #f8f8f8;
+    border-radius: 40px; 
+
     display: block;
 }
 .swing:after{

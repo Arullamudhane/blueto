@@ -104,7 +104,7 @@ const Home = () => {
 
         <HomeAbout />
         <Features />
-        <FlipCard />
+        {/* <FlipCard /> */}
         {/* <BGAnimation /> */}
       </div>
     </Bounded>

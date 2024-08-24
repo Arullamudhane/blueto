@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import { animateWithGsap } from "../utils/animation";
 import "./Features.css";
 
+import { useEffect } from "react";
 import gsap from "gsap";
 import { dots } from "../assets";
 import AnimatedCounter from "./AnimatedCounter";
@@ -42,6 +43,33 @@ const Features = () => {
     // });
   }, []);
 
+  const counterRef = useRef(null);
+
+  useEffect(() => {
+    const element = counterRef.current;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Add the animation class when the element is visible
+            element.classList.add("animate-lineGrow");
+            // Stop observing after animation starts
+            observer.unobserve(element);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    ); // Adjust threshold as needed
+
+    if (element) {
+      observer.observe(element);
+    }
+
+    // Cleanup observer on unmount
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <section className='h-full  bg-zinc relative overflow-hidden '>
@@ -59,7 +87,7 @@ const Features = () => {
           <div className='feature-text-container'>
             <div className='flex-1 '>
               <p className='feature-text g_text'>
-                <p className='text-white my-4'>
+                <p className='text-yellow-500 my-4 text-[1.7rem] font-semibold'>
                   Own Your Vision, Command the Process
                 </p>
                 From day one, you’re not just involved—you’re in charge. Your
@@ -68,7 +96,7 @@ const Features = () => {
                 compromise. You lead, we execute.
               </p>
               <p className='feature-text g_text'>
-                <p className='text-white my-4'>
+                <p className='text-yellow-500 my-4 text-[1.7rem] font-semibold'>
                   Real-Time Updates, Full Transparency
                 </p>
                 Experience the thrill of running your own project with daily
@@ -77,14 +105,16 @@ const Features = () => {
                 is realized exactly as you envision it.
               </p>
               <p className='feature-text g_text'>
-                <p className='text-white my-4'>Lead Like a CEO</p>
+                <p className='text-yellow-500 my-4 text-[1.7rem] font-semibold'>
+                  Lead Like a CEO
+                </p>
                 Step into the role of a CEO—visit our team, drive the
                 development process, and watch your product take shape under
                 your leadership. This isn’t just a service; it’s a partnership
                 where your decisions define the outcome.
               </p>
               <p className='feature-text g_text'>
-                <p className='text-white my-4'>
+                <p className='text-yellow-500 my-4 text-[1.7rem] font-semibold'>
                   Why Choose Blueto? Expertise:{" "}
                 </p>
                 Our team comprises skilled professionals with in-depth knowledge
@@ -94,7 +124,10 @@ const Features = () => {
                 delivering high-quality software ensures that your project meets
                 the highest standards.{" "}
                 <span className='text-white '>
-                  ALL THE PROJECTS WILL BE KEPT AS SECRETS.
+                  <b>
+                    <br />
+                    ALL THE PROJECTS WILL BE KEPT AS SECRETS.
+                  </b>
                 </span>{" "}
               </p>
               {/* <div className=' md:flex flex-row items-center justify-around hidden mt-20'>
@@ -136,7 +169,10 @@ const Features = () => {
       >
         <div className='sec1 relative'>
           <div className='absolute inset-0 flex justify-center  '>
-            <div className=' w-0.5 bg-gradient-to-b from-transparent via-red-300 to-green animate-lineGrow'></div>
+            <div
+              ref={counterRef}
+              className=' w-0.5 bg-gradient-to-b from-transparent via-pink-300 to-green '
+            ></div>
           </div>
           {/* <div class='absolute inset-0 ml-5 translate-x-0.5 md:ml-[8.75rem] md:translate-x-0 h-[90vh] w-0.5 bg-gradient-to-b from-transparent via-red-300 to-green animate-lineGrow'></div> */}
           <div class='reusecard relative opacity-0 animate-fadeInLeft animation-delay-100'>
@@ -169,7 +205,7 @@ const Features = () => {
 
           {/* <div class='absolute inset-0 ml-5 translate-x-0.5 md:ml-[8.75rem] md:translate-x-0 h-full w-0.5 bg-gradient-to-b from-transparent via-slate-300 to-transparent animate-lineGrow'></div> */}
           <div class='reusecard relative opacity-0 animate-fadeInLeft animation-delay-200'>
-            <div class='md:flex items-center md:space-x-4 mb-3'>
+            <div class='md:flex items-center md:space-x-4 mb-7'>
               <div class='flex items-center space-x-4 md:space-x-2 md:space-x-reverse'>
                 <div class='flex items-center justify-center w-10 h-10 rounded-full bg-white shadow md:order-1 ml-[16.5rem]'>
                   <svg

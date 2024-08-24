@@ -76,11 +76,14 @@ export const services = [
   {
     title: "Maintenance and Support",
   },
+  {
+    title: "Marketing",
+  },
 ];
 export const bluetoservices = [
+  "Experience the CEO role",
   "Project under your control",
   "Your Ideas Stay Confidential",
-  "Seamless Integration",
 ];
 
 export const brainwaveServicesIcons = [
