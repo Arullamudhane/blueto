@@ -191,7 +191,7 @@ const Features = () => {
               </div>
               <div class='text-slate-500 ml-14'>
                 <div class='flex flex-col gap-4'>
-                  <div class='flex flex-col items-center justify-center text-center h-[100px] w-[250px] rounded-lg text-white cursor-pointer transition-transform duration-400 transform hover:scale-110 bg-blue-500'>
+                  <div class='flex flex-col items-center justify-center text-center h-[100px] w-[250px] rounded-lg text-white cursor-pointer transition-transform duration-400 transform hover:scale-110 one'>
                     <p class='text-base font-bold'>Connect with Us</p>
                     <p class='text-xs'>Welcome aboard</p>
                   </div>
@@ -220,7 +220,7 @@ const Features = () => {
               </div>
               <div class='text-slate-500 ml-14'>
                 <div class='flex flex-col gap-4'>
-                  <div class='flex flex-col items-center justify-center text-center h-[100px] w-[250px] rounded-lg text-white cursor-pointer transition-transform duration-400 transform hover:scale-110 bg-red-500'>
+                  <div class='flex flex-col items-center justify-center text-center h-[100px] w-[250px] rounded-lg text-white cursor-pointer transition-transform duration-400 transform hover:scale-110 two'>
                     <p class='text-base font-bold'>BrainStorm Your Idea</p>
                     <p class='text-xs'>Lets do a research</p>
                   </div>
@@ -246,7 +246,7 @@ const Features = () => {
               </div>
               <div class='text-slate-500 ml-14'>
                 <div class='flex flex-col gap-4'>
-                  <div class='flex flex-col items-center justify-center text-center h-[100px] w-[250px] rounded-lg text-white cursor-pointer transition-transform duration-400 transform hover:scale-110 bg-yellow-500'>
+                  <div class='flex flex-col items-center justify-center text-center h-[100px] w-[250px] rounded-lg text-white cursor-pointer transition-transform duration-400 transform hover:scale-110 three'>
                     <p class='text-base font-bold'>Get Your team</p>
                     <p class='text-xs'>Welcome CEO</p>
                   </div>
@@ -271,7 +271,7 @@ const Features = () => {
               </div>
               <div class='text-slate-500 ml-14'>
                 <div class='flex flex-col gap-4'>
-                  <div class='flex flex-col items-center justify-center text-center h-[100px] w-[250px] rounded-lg text-white cursor-pointer transition-transform duration-400 transform hover:scale-110 bg-green-500'>
+                  <div class='flex flex-col items-center justify-center text-center h-[100px] w-[250px] rounded-lg text-white cursor-pointer transition-transform duration-400 transform hover:scale-110 four'>
                     <p class='text-base font-bold'>Create Product</p>
                     <p class='text-xs'>Great!</p>
                   </div>

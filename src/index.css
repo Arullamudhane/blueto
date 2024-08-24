@@ -30,8 +30,9 @@ code {
     monospace;
 }
 .violet-gradient {
-  background: #804dee;
-  background: linear-gradient(-90deg, #804dee 0%, rgba(60, 51, 80, 0) 100%);
+  /* background: #804dee; */
+  background: linear-gradient(to top, #1fae7b 0%, #852add 100%);
+  /* linear-gradient(to top, #41b88e 0%, #6C33A3 100%); */
   background: -webkit-linear-gradient(
     -90deg,
     #804dee 0%,
@@ -184,7 +185,7 @@ code {
 
 
 .text-gradient {
-  background: linear-gradient(to top, #8241B8 0%,  #6C33A3 100%);
+  background: linear-gradient(to top, #1fae7b 0%, #852add 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
