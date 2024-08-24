@@ -79,7 +79,7 @@ const Features = () => {
           <div className='mb-12 w-full'>
             <h1
               id='features_title'
-              className='text-zinc-500 lg:text-6xl md:text-5xl text-3xl lg:mb-0 mb-5 font-medium opacity-0 translate-y-20'
+              className='text-zinc-500 lg:text-6xl md:text-5xl text-3xl lg:mb-0  font-medium opacity-0 translate-y-20'
             >
               Explore the full story.
             </h1>
