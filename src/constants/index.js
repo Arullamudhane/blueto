@@ -53,7 +53,7 @@ export const products = [
     image: dashboard,
   },
   {
-    title: "ReviewApplication",
+    title: "Review Application",
     description: "",
     image: reviewapp,
   },
