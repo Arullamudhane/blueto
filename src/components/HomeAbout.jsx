@@ -8,7 +8,7 @@ const HomeAbout = () => {
   return (
     // customPaddings={'pt-10 mt-0'}
     <Section id='how-to-use'>
-      <div className='container bg-black'>
+      <div className='container '>
         <div className='max-w-[50rem] mx-auto mb-2  lg:mb-20 md:text-center  '>
           <h2
             className='h2 hover:work  tracking-widest   
@@ -21,7 +21,10 @@ const HomeAbout = () => {
         </div>
 
         <div className='relative '>
-          <div className='relative z-1 flex items-center h-[60rem] mb-5 p-8 border border-stone-700 rounded-3xl overflow-hidden lg:p-20 xl:h-[41rem] bg-red-100'>
+          <div
+            className='relative z-1 flex items-center h-[60rem] mb-5 p-8 border
+           border-stone-700 rounded-3xl overflow-hidden lg:p-20 xl:h-[41rem] '
+          >
             <div className='absolute top-0 left-0 w-full h-full pointer-events-none md:w-3/5 xl:w-auto '>
               <img
                 className='w-full h-full object-cover md:object-right '
