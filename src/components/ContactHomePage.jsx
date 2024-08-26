@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const ContactHomePage = () => {
   return (
@@ -9,8 +9,9 @@ const ContactHomePage = () => {
         text-slate-100 flex flex-col md:flex-row  items-center justify-center space-y-3 md:space-y-0 md:justify-evenly'
       >
         <h1 className='h1 text-md md:text-2xl '>
-          Please don't hesitate to reach out with any inquiries- we're here to
-          assist you.
+          {/* Please don't hesitate to reach out with any inquiries- we're here to
+          assist you. */}
+          Got questions? Let's chat over a cup of tea! We're here to help
         </h1>
         <button
           className='px-4 py-2 text-md

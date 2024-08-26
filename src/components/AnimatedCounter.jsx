@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import './Counter.css'; // Import the CSS file for styling and animation
+import React, { useState, useEffect, useRef } from "react";
+import "./Counter.css"; // Import the CSS file for styling and animation
 
 const AnimatedCounter = () => {
   const [count, setCount] = useState(0);
@@ -53,7 +53,7 @@ const AnimatedCounter = () => {
       </h3>
 
       <span ref={counterRef} className=' text-xl text-blue-100'>
-        completed projects
+        Completed End-to-End Projects
       </span>
     </div>
   );
