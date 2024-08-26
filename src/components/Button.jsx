@@ -16,7 +16,7 @@ export default function Button({
     <NavLink
       to={to}
       className={clsx(
-        'group relative  flex w-fit items-center  justify-center overflow-hidden rounded-md border-2 border-slate-900 bg-slate-50 font-bold  px-4 py-1  transition-transform ease-out  hover:scale-105',
+        'group relative  flex w-fit items-center  justify-center overflow-hidden rounded-md border-2 border-slate-900 bg-slate-50 font-bold   transition-transform ease-out  hover:scale-105',
         className
       )}
       onClick={() => setOpen(false)}

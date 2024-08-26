@@ -154,7 +154,7 @@ function DesktopMenu({ pathname, links, setOpen }) {
         <Button
           to='/contact'
           link='contact'
-          className='ml-3'
+          className='ml-3  px-4 py-1'
           setOpen={setOpen}
         />
       </li>

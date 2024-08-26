@@ -9,6 +9,8 @@ import BGAnimation from './BGAnimation';
 import BounceButton from './BounceButton';
 import FlipCard from './FlipCard';
 import SwingImage from './SwingImage';
+import Button from '../components/Button';
+import ContactHomePage from '../components/ContactHomePage';
 const Home = () => {
   const component = useRef(null);
   useEffect(() => {
@@ -69,9 +71,14 @@ const Home = () => {
 
   return (
     <Bounded ref={component} className='md:py-0 lg:py-0  '>
-      <div className=' min-h-[50vh] max-h-[90vh]  grid  grid-cols-1 md:grid-cols-2  items-center  md:-mt-36 md:mb-0  relative  '>
+      <div
+        className=' max-h-screen  md:max-h-[90vh]    grid  grid-cols-1 md:grid-cols-2 
+         items-center 
+       md:-mt-36 md:mb-0  relative  '
+      >
         <Shapes />
-        <div className='col-start-1 md:row-start-1 -mt-10 md:mt-0 '>
+
+        <div className=' col-start-1 md:row-start-1 -mt-10 md:mt-0 '>
           <h1
             className='mb-8  text-[clamp(3rem,20vmin,20rem)] font-extrabold leading-none mt-0 '
             aria-label={'blueto-tech'}
@@ -83,14 +90,19 @@ const Home = () => {
               {renderLetters('Tech.', 'last')}
             </span>
           </h1>
-
-          <span className='work hidden md:block   bg-gradient-to-tr from-yellow-700 via-yellow-200 to-yellow-700 bg-clip-text text-xl font-semibold   text-transparent opacity-0 '>
-            crafting a world where <b>exceptional services</b> adorns every
-            smile
-          </span>
+          <div className=' mb-5'>
+            <span
+              className='work 
+          bg-gradient-to-tr from-yellow-700 via-yellow-200 to-yellow-700
+           bg-clip-text text-xl font-semibold   text-transparent opacity-0 '
+            >
+              crafting a world where <b>exceptional services</b> adorns every
+              smile
+            </span>
+          </div>
         </div>
       </div>
-      <div className='flex items-center justify-center  mt-0'>
+      <div className='flex items-center justify-center  '>
         <BounceButton />
       </div>
       <div className=''>
@@ -101,12 +113,10 @@ const Home = () => {
           <img src={addon1} alt='addon' className='' />
         </div>
 
-        {/* <svg class='animate-bounce w-6 h-6 ...'></svg> */}
-
         <HomeAbout />
         <Features />
-        {/* <FlipCard /> */}
-        {/* <BGAnimation /> */}
+
+        <ContactHomePage />
       </div>
     </Bounded>
   );

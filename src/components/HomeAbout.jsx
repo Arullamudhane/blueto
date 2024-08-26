@@ -9,7 +9,7 @@ const HomeAbout = () => {
     // customPaddings={'pt-10 mt-0'}
     <Section id='how-to-use'>
       <div className='container  '>
-        <div className='max-w-[50rem] mx-auto mb-2  lg:mb-20 md:text-center  '>
+        <div className='max-w-[50rem] mx-auto mb-10  lg:mb-20 md:text-center  '>
           <h2
             className='h2 hover:work  tracking-widest   
             
