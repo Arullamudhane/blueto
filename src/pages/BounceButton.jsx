@@ -1,10 +1,10 @@
 const BounceButton = () => {
   return (
     <>
-      {" "}
-      <span class='inline-block animate-bounce rounded-full p-4 bg-teal-400 text-white text-sm'>
+      {' '}
+      <span class='inline-block animate-bounce rounded-full p-1 md:p-4 bg-teal-400 text-white text-xs md:text-sm'>
         <svg
-          class='w-6 h-6 mx-auto'
+          class='w-4 h-4 md:w-6 md:h-6  mx-auto'
           xmlns='http://www.w3.org/2000/svg'
           fill='none'
           viewBox='0 0 24 24'

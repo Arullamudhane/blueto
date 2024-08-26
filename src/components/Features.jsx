@@ -9,6 +9,7 @@ import { dots } from '../assets';
 import AnimatedCounter from './AnimatedCounter';
 import SwingImage from '../pages/SwingImage';
 import AgileCard from './AgileCard';
+import Button from './Button';
 
 const Features = () => {
   let agileCards = [

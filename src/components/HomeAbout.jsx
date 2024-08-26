@@ -8,12 +8,12 @@ const HomeAbout = () => {
   return (
     // customPaddings={'pt-10 mt-0'}
     <Section id='how-to-use'>
-      <div className='container '>
+      <div className='container  '>
         <div className='max-w-[50rem] mx-auto mb-2  lg:mb-20 md:text-center  '>
           <h2
             className='h2 hover:work  tracking-widest   
             
-            bg-gradient-to-r  from-purple-800 to-red-600 p-4 rounded-xl
+            bg-gradient-to-r  from-purple-800 to-red-600  rounded-xl
              bg-clip-text text-lg md:text-3xl   leading-8 text-transparent opacity-1  font-bold'
           >
             Blueto: Your Software Product Company
@@ -23,7 +23,7 @@ const HomeAbout = () => {
         <div className='relative '>
           <div
             className='relative z-1 flex items-center h-[60rem] mb-5 p-8 border
-           border-stone-700 rounded-3xl overflow-hidden lg:p-20 xl:h-[41rem] '
+           border-stone-700 rounded-3xl overflow-hidden lg:p-20 xl:h-[44rem] '
           >
             <div className='absolute top-0 left-0 w-full h-full pointer-events-none md:w-3/5 xl:w-auto '>
               <img
