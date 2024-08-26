@@ -1,15 +1,15 @@
-import { useRef, useEffect } from "react";
-import Section from "./Section";
-import gsap from "gsap";
-import { service1, check } from "../assets";
-import { bluetoservices } from "../constants";
+import { useRef, useEffect } from 'react';
+import Section from './Section';
+import gsap from 'gsap';
+import { service1, check } from '../assets';
+import { bluetoservices } from '../constants';
 
 const HomeAbout = () => {
   return (
     // customPaddings={'pt-10 mt-0'}
     <Section id='how-to-use'>
-      <div className='container '>
-        <div className='max-w-[50rem] mx-auto mb-12 lg:mb-20 md:text-center  '>
+      <div className='container bg-black'>
+        <div className='max-w-[50rem] mx-auto mb-2  lg:mb-20 md:text-center  '>
           <h2
             className='h2 hover:work  tracking-widest   
             
@@ -21,7 +21,7 @@ const HomeAbout = () => {
         </div>
 
         <div className='relative '>
-          <div className='relative z-1 flex items-center h-[41rem] mb-5 p-8 border border-stone-700 rounded-3xl overflow-hidden lg:p-20 xl:h-[41rem]'>
+          <div className='relative z-1 flex items-center h-[60rem] mb-5 p-8 border border-stone-700 rounded-3xl overflow-hidden lg:p-20 xl:h-[41rem] bg-red-100'>
             <div className='absolute top-0 left-0 w-full h-full pointer-events-none md:w-3/5 xl:w-auto '>
               <img
                 className='w-full h-full object-cover md:object-right '
@@ -42,7 +42,7 @@ const HomeAbout = () => {
                 <div class='bg-gradient-to-r from-purple-800 via-black-400  to-black-400 p-4  rounded-xl'>
                   <blockquote class='border-l-4 border-blue-500 pl-4 italic text-white text-bold tracking-widest'>
                     <span>At Blueto,</span> "you are not just a client—you are
-                    the CEO of your project."{" "}
+                    the CEO of your project."{' '}
                   </blockquote>
                 </div>
               </p>
@@ -54,10 +54,10 @@ const HomeAbout = () => {
                   steer the direction while we manage the technical execution. */}
                   <b>
                     Experience the role of <b>CEO</b>
-                  </b>{" "}
+                  </b>{' '}
                   and transform your ideas into real-world applications with
                   full decision-making power. We handle the technical execution
-                  while you remain in control, ensuring your{" "}
+                  while you remain in control, ensuring your{' '}
                   <b>ideas are confidential</b> and securely managed. Get expert
                   support and custom software solutions to bring your concepts
                   to life.

@@ -1,42 +1,48 @@
-body {background: #eee;}
 .swing {
-    animation: swing ease-in-out 1s infinite alternate;
-    transform-origin: center -20px;
-    float:left;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
-    height: 10vh;
-    width: 20vw;
-    /* background-color: #eee; */
+  animation: swing ease-in-out 1s infinite alternate;
+  transform-origin: center -20px;
+  float: left;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+  /* background-color: #eee; */
 }
 .swing img {
-    border: 3px solid #f8f8f8;
-    border-radius: 40px; 
+  /* border: 3px solid #f8f8f8; */
+  border-radius: 40px;
 
-    display: block;
+  display: block;
 }
-.swing:after{
-    content: '';
-    position: absolute;  
-    width: 20px; height: 20px;  
-    border: 1px solid #999;
-    top: -10px; left: 50%;
-    z-index: 0;
-    border-bottom: none;
-    border-right: none;
-    transform: rotate(45deg);
+.swing:after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #999;
+  top: -10px;
+  left: 50%;
+  z-index: 0;
+  border-bottom: none;
+  border-right: none;
+  transform: rotate(45deg);
 }
 /* nail */
-.swing:before{
-    content: '';
-    position: absolute;
-    width: 5px; height: 5px;
-    top: -14px;left: 54%;
-   
-    border-radius: 50% 50%;
-    background: #000;
+.swing:before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: -14px;
+  left: 54%;
+
+  border-radius: 50% 50%;
+  background: #000;
 }
- 
+
 @keyframes swing {
-    0% { transform: rotate(1deg); }
-    100% { transform: rotate(-1deg); }
+  0% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(-1deg);
+  }
 }

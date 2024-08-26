@@ -1,32 +1,55 @@
-import { useGSAP } from "@gsap/react";
-import React, { useRef } from "react";
-import { animateWithGsap } from "../utils/animation";
-import "./Features.css";
+import { useGSAP } from '@gsap/react';
+import React, { useRef } from 'react';
+import { animateWithGsap } from '../utils/animation';
+import './Features.css';
 
-import { useEffect } from "react";
-import gsap from "gsap";
-import { dots } from "../assets";
-import AnimatedCounter from "./AnimatedCounter";
-import SwingImage from "../pages/SwingImage";
+import { useEffect } from 'react';
+import gsap from 'gsap';
+import { dots } from '../assets';
+import AnimatedCounter from './AnimatedCounter';
+import SwingImage from '../pages/SwingImage';
+import AgileCard from './AgileCard';
 
 const Features = () => {
+  let agileCards = [
+    {
+      color: 'bg-blue-500',
+      title: 'Connect with us',
+      subTitle: 'Welcome abord',
+    },
+    {
+      color: 'bg-red-500',
+      title: 'BrainStorm Your Idea',
+      subTitle: 'Lets do a research',
+    },
+    {
+      color: 'bg-orange-500',
+      title: 'Get Your team',
+      subTitle: 'Welcome CEO',
+    },
+    {
+      color: 'bg-green-500',
+      title: 'Create Product',
+      subTitle: 'Great!',
+    },
+  ];
   useGSAP(() => {
     animateWithGsap(
-      ".g_box",
+      '.g_box',
       // { rotation: 360, x: 1, duration: 1,  }
-      { y: 0, scale: 1, opacity: 1, ease: "power1" },
+      { y: 0, scale: 1, opacity: 1, ease: 'power1' },
       { scrub: 5.5 }
     );
-    animateWithGsap("#features_title", { y: 0, opacity: 1 });
+    animateWithGsap('#features_title', { y: 0, opacity: 1 });
     animateWithGsap(
-      ".g_grow",
-      { scale: 1, opacity: 1, ease: "power1" },
+      '.g_grow',
+      { scale: 1, opacity: 1, ease: 'power1' },
       { scrub: 5.5 }
     );
-    animateWithGsap(".g_text", {
+    animateWithGsap('.g_text', {
       y: 0,
       opacity: 1,
-      ease: "power2.inOut",
+      ease: 'power2.inOut',
       duration: 1,
     });
     // animateWithGsap(".g_box", {
@@ -53,7 +76,7 @@ const Features = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             // Add the animation class when the element is visible
-            element.classList.add("animate-lineGrow");
+            element.classList.add('animate-lineGrow');
             // Stop observing after animation starts
             observer.unobserve(element);
           }
@@ -115,20 +138,20 @@ const Features = () => {
               </p>
               <p className='feature-text g_text'>
                 <p className='text-gradient my-4 text-[1.7rem] font-semibold'>
-                  Why Choose Blueto? Expertise:{" "}
+                  Why Choose Blueto? Expertise:{' '}
                 </p>
                 Our team comprises skilled professionals with in-depth knowledge
                 of the latest technologies. Custom Solutions: We understand that
                 every business is unique. Our solutions are tailor-made to fit
                 your specific requirements. Quality Assurance: Our commitment to
                 delivering high-quality software ensures that your project meets
-                the highest standards.{" "}
+                the highest standards.{' '}
                 <span className='text-white '>
                   <b>
                     <br />
                     ALL THE PROJECTS WILL BE KEPT AS SECRETS.
                   </b>
-                </span>{" "}
+                </span>{' '}
               </p>
               {/* <div className=' md:flex flex-row items-center justify-around hidden mt-20'>
                 <div className='g_box   hidden md:flex w-36 h-40 md:w-64 md:h-64 border-2  items-center justify-center rounded-2xl '>
@@ -161,133 +184,30 @@ const Features = () => {
         </div>
       </section>
 
-      {/* yyyyyyy */}
+      {/* yyyyyyy  project counts and agile methodologies*/}
+      <div className='ml-0 grid grid-cols-1 lg:grid-cols-2 gap-x-0 gap-y-10 px-0  lg:px-20  '>
+        {/* Agile-------- */}
 
-      <div
-        class='timeline-container space-y-8 relative overflow-hidden mt-[5rem]  
-      border border-blue-300 p-5 rounded-md shadow-custom-red'
-      >
-        <div className='sec1 relative'>
-          <div className='absolute inset-0 flex justify-center  '>
+        <div
+          className='relative flex  flex-col justify-between   items-center border-2
+         border-zinc-800/50 rounded-2xl shadow-inner p-2 md:p-10'
+        >
+          <div className='absolute inset-0 flex justify-center  mr-[16.5rem] md:mr-[19rem] lg:mr-[19rem]  '>
             <div
               ref={counterRef}
               className=' w-0.5 bg-gradient-to-b from-transparent via-pink-300 to-green '
             ></div>
           </div>
-          {/* <div class='absolute inset-0 ml-5 translate-x-0.5 md:ml-[8.75rem] md:translate-x-0 h-[90vh] w-0.5 bg-gradient-to-b from-transparent via-red-300 to-green animate-lineGrow'></div> */}
-          <div class='reusecard relative opacity-0 animate-fadeInLeft animation-delay-100'>
-            <div class='md:flex items-center md:space-x-4 mb-3'>
-              <div class='flex items-center space-x-4 md:space-x-2 md:space-x-reverse'>
-                <div class='flex items-center justify-center w-10 h-10 rounded-full bg-white shadow md:order-1 ml-[16.5rem]'>
-                  <svg
-                    class='fill-emerald-500'
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='16'
-                    height='16'
-                  >
-                    <path d='M8 0a8 8 0 1 0 8 8 8.009 8.009 0 0 0-8-8Zm0 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z' />
-                  </svg>
-                </div>
-              </div>
-              <div class='text-slate-500 ml-14'>
-                <div class='flex flex-col gap-4'>
-                  <div class='flex flex-col items-center justify-center text-center h-[100px] w-[250px] rounded-lg text-white cursor-pointer transition-transform duration-400 transform hover:scale-110 one'>
-                    <p class='text-base font-bold'>Connect with Us</p>
-                    <p class='text-xs'>Welcome aboard</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* <div class='relative opacity-0 animate-fadeInLeft animation-delay-300'></div>
-        <div class='relative opacity-0 animate-fadeInLeft animation-delay-500'></div> */}
-          {/* jb */}
-
-          {/* <div class='absolute inset-0 ml-5 translate-x-0.5 md:ml-[8.75rem] md:translate-x-0 h-full w-0.5 bg-gradient-to-b from-transparent via-slate-300 to-transparent animate-lineGrow'></div> */}
-          <div class='reusecard relative opacity-0 animate-fadeInLeft animation-delay-200'>
-            <div class='md:flex items-center md:space-x-4 mb-7'>
-              <div class='flex items-center space-x-4 md:space-x-2 md:space-x-reverse'>
-                <div class='flex items-center justify-center w-10 h-10 rounded-full bg-white shadow md:order-1 ml-[16.5rem]'>
-                  <svg
-                    class='fill-emerald-500'
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='16'
-                    height='16'
-                  >
-                    <path d='M8 0a8 8 0 1 0 8 8 8.009 8.009 0 0 0-8-8Zm0 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z' />
-                  </svg>
-                </div>
-              </div>
-              <div class='text-slate-500 ml-14'>
-                <div class='flex flex-col gap-4'>
-                  <div class='flex flex-col items-center justify-center text-center h-[100px] w-[250px] rounded-lg text-white cursor-pointer transition-transform duration-400 transform hover:scale-110 two'>
-                    <p class='text-base font-bold'>BrainStorm Your Idea</p>
-                    <p class='text-xs'>Lets do a research</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* <div class='absolute inset-0 ml-5 translate-x-0.5 md:ml-[8.75rem] md:translate-x-0 h-full w-0.5 bg-gradient-to-b from-transparent via-slate-300 to-transparent animate-lineGrow'></div> */}
-          <div class='reusecard relative opacity-0 animate-fadeInLeft animation-delay-300'>
-            <div class='md:flex items-center md:space-x-4 mb-3'>
-              <div class='flex items-center space-x-4 md:space-x-2 md:space-x-reverse'>
-                <div class='flex items-center justify-center w-10 h-10 rounded-full bg-white shadow md:order-1 ml-[16.5rem]'>
-                  <svg
-                    class='fill-emerald-500'
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='16'
-                    height='16'
-                  >
-                    <path d='M8 0a8 8 0 1 0 8 8 8.009 8.009 0 0 0-8-8Zm0 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z' />
-                  </svg>
-                </div>
-              </div>
-              <div class='text-slate-500 ml-14'>
-                <div class='flex flex-col gap-4'>
-                  <div class='flex flex-col items-center justify-center text-center h-[100px] w-[250px] rounded-lg text-white cursor-pointer transition-transform duration-400 transform hover:scale-110 three'>
-                    <p class='text-base font-bold'>Get Your team</p>
-                    <p class='text-xs'>Welcome CEO</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* <div class='absolute inset-0 ml-5 translate-x-0.5 md:ml-[8.75rem] md:translate-x-0 h-full w-0.5 bg-gradient-to-b from-transparent via-slate-300 to-transparent animate-lineGrow'></div> */}
-          <div class='reusecard relative opacity-0 animate-fadeInLeft animation-delay-400'>
-            <div class='md:flex items-center md:space-x-4 mb-3'>
-              <div class='flex items-center space-x-4 md:space-x-2 md:space-x-reverse'>
-                <div class='flex items-center justify-center w-10 h-10 rounded-full bg-white shadow md:order-1 ml-[16.5rem]'>
-                  <svg
-                    class='fill-emerald-500'
-                    xmlns='http://www.w3.org/2000/svg'
-                    width='16'
-                    height='16'
-                  >
-                    <path d='M8 0a8 8 0 1 0 8 8 8.009 8.009 0 0 0-8-8Zm0 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z' />
-                  </svg>
-                </div>
-              </div>
-              <div class='text-slate-500 ml-14'>
-                <div class='flex flex-col gap-4'>
-                  <div class='flex flex-col items-center justify-center text-center h-[100px] w-[250px] rounded-lg text-white cursor-pointer transition-transform duration-400 transform hover:scale-110 four'>
-                    <p class='text-base font-bold'>Create Product</p>
-                    <p class='text-xs'>Great!</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* <div class='relative opacity-0 animate-fadeInLeft animation-delay-900'></div> */}
-          {/* <div class='relative opacity-0 animate-fadeInLeft animation-delay-500'></div> */}
+          {agileCards.map((items, index) => (
+            <AgileCard items={items} />
+          ))}
         </div>
-        <div className='sec2 h-[20vh] w-[20vw]'>
+        {/* Counter ------------ */}
+        <div className=' grid grid-rows-2 gap-y-10 items-center justify-center'>
           <AnimatedCounter />
           <SwingImage />
         </div>
       </div>
-
       {/* countr */}
     </>
   );
