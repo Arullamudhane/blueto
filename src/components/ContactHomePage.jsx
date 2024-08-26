@@ -1,5 +1,5 @@
 import React from "react";
-
+import { NavLink } from "react-router-dom";
 const ContactHomePage = () => {
   return (
     <div className=' mt-10 '>
@@ -13,12 +13,13 @@ const ContactHomePage = () => {
           assist you. */}
           Got questions? Let's chat over a cup of tea! We're here to help
         </h1>
-        <button
+        <NavLink
+          to='/contact'
           className='px-4 py-2 text-md
          text-slate-100 bg-pink-900/50 md:text-2xl  rounded-lg  '
         >
           Contact Us
-        </button>
+        </NavLink>
       </div>
     </div>
   );
