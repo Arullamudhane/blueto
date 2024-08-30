@@ -1,8 +1,8 @@
-import { useRef, useEffect } from 'react';
-import Section from './Section';
-import gsap from 'gsap';
-import { service1, check } from '../assets';
-import { bluetoservices } from '../constants';
+import { useRef, useEffect } from "react";
+import Section from "./Section";
+import gsap from "gsap";
+import { service1, check } from "../assets";
+import { bluetoservices } from "../constants";
 
 const HomeAbout = () => {
   return (
@@ -14,7 +14,7 @@ const HomeAbout = () => {
             className='h2 hover:work  tracking-widest   
             
             bg-gradient-to-r  from-purple-800 to-red-600  rounded-xl
-             bg-clip-text text-lg md:text-3xl   leading-8 text-transparent opacity-1  font-bold'
+             bg-clip-text text-lg md:text-3xl   leading-8 text-transparent opacity-1  font-bold text-center'
           >
             Blueto: Your Software Product Company
           </h2>
@@ -45,7 +45,7 @@ const HomeAbout = () => {
                 <div class='bg-gradient-to-r from-purple-800 via-black-400  to-black-400 p-4  rounded-xl'>
                   <blockquote class='border-l-4 border-blue-500 pl-4 italic text-white text-bold tracking-widest'>
                     <span>At Blueto,</span> "you are not just a client—you are
-                    the CEO of your project."{' '}
+                    the CEO of your project."{" "}
                   </blockquote>
                 </div>
               </p>
@@ -57,10 +57,10 @@ const HomeAbout = () => {
                   steer the direction while we manage the technical execution. */}
                   <b>
                     Experience the role of <b>CEO</b>
-                  </b>{' '}
+                  </b>{" "}
                   and transform your ideas into real-world applications with
                   full decision-making power. We handle the technical execution
-                  while you remain in control, ensuring your{' '}
+                  while you remain in control, ensuring your{" "}
                   <b>ideas are confidential</b> and securely managed. Get expert
                   support and custom software solutions to bring your concepts
                   to life.

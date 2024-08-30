@@ -8,6 +8,10 @@ import service1 from "./services/service-1.png";
 import addon1 from "./10.png";
 import dots from "./dots.png";
 import agile from "./agile.png";
+import loguone from "./loguone.png";
+import logutwo from "./logutwo.png";
+import arull3 from "./arull3.png";
+import arull2 from "./arull2.png";
 export {
   dots,
   addon1,
@@ -19,4 +23,8 @@ export {
   check,
   service1,
   agile,
+  loguone,
+  logutwo,
+  arull2,
+  arull3,
 };

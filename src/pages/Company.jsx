@@ -1,7 +1,9 @@
-import React from 'react';
-import Bounded from '../components/Bounded';
-import officeImg from '../Office  Background.png';
-import Heading from '../components/Heading';
+import React from "react";
+import Bounded from "../components/Bounded";
+import officeImg from "../Office  Background.png";
+import Heading from "../components/Heading";
+import ProfileCard from "../components/Profilecard";
+import Line from "../components/Line";
 const Company = () => {
   return (
     <Bounded>
@@ -20,18 +22,29 @@ const Company = () => {
             excellence, we deliver custom software solutions tailored to your
             unique needs.
           </p>
-          <p className='font-bold pt-[2vh] text-[#72d6e5]'>Why Choose Blueto?</p>
-          <p className='pb-2'>
-            Expertise: Our team comprises skilled professionals with in-depth
-            knowledge of the latest technologies.
+          <p className='font-bold pt-[2vh] text-[#72d6e5]'>
+            Why Choose Blueto?
           </p>
           <p className='pb-2'>
-            Custom Solutions: We understand that every business is unique. Our
-            solutions are tailor-made to fit your specific requirements.
+            <b class='text-xl font-semibold text-blue-600/80 dark:text-blue-500/80'>
+              Expertise:
+            </b>{" "}
+            Our team comprises skilled professionals with in-depth knowledge of
+            the latest technologies.
           </p>
           <p className='pb-2'>
-            Quality Assurance: Our commitment to delivering high-quality
-            software ensures that your project meets the highest standards.
+            <b class='text-xl font-semibold text-blue-600/80 dark:text-blue-500/80'>
+              Custom Solutions:
+            </b>{" "}
+            We understand that every business is unique. Our solutions are
+            tailor-made to fit your specific requirements.
+          </p>
+          <p className='pb-2'>
+            <b class='text-xl font-semibold text-blue-600/80 dark:text-blue-500/80'>
+              Quality Assurance:
+            </b>{" "}
+            Our commitment to delivering high-quality software ensures that your
+            project meets the highest standards.
           </p>
         </div>
         {/* Image */}
@@ -43,6 +56,19 @@ const Company = () => {
           />
         </div>
       </div>
+      <Line />
+      <div className='team'>
+        <p className='font-bold pt-[2vh] text-[#72d6e5]'>Meet Our Team</p>
+        <p className='pb-2'>
+          Our talented team drives innovation and excellence. Each member brings
+          unique expertise and a passion for technology, working collaboratively
+          to deliver outstanding solutions. Get to know the faces behind our
+          success and see how their skills and dedication shape our projects.
+        </p>
+      </div>
+      <ProfileCard />
+      {/* <ProfileCard /> */}
+      {/* <Profilecard /> */}
     </Bounded>
   );
 };
