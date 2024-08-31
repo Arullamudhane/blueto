@@ -1,9 +1,9 @@
-import React from "react";
-import Bounded from "../components/Bounded";
-import officeImg from "../Office  Background.png";
-import Heading from "../components/Heading";
-import ProfileCard from "../components/Profilecard";
-import Line from "../components/Line";
+import React from 'react';
+import Bounded from '../components/Bounded';
+import officeImg from '../Office  Background.png';
+import Heading from '../components/Heading';
+import ProfileCard from '../components/Profilecard';
+import Line from '../components/Line';
 const Company = () => {
   return (
     <Bounded>
@@ -28,21 +28,21 @@ const Company = () => {
           <p className='pb-2'>
             <b class='text-xl font-semibold text-blue-600/80 dark:text-blue-500/80'>
               Expertise:
-            </b>{" "}
+            </b>{' '}
             Our team comprises skilled professionals with in-depth knowledge of
             the latest technologies.
           </p>
           <p className='pb-2'>
             <b class='text-xl font-semibold text-blue-600/80 dark:text-blue-500/80'>
               Custom Solutions:
-            </b>{" "}
+            </b>{' '}
             We understand that every business is unique. Our solutions are
             tailor-made to fit your specific requirements.
           </p>
           <p className='pb-2'>
             <b class='text-xl font-semibold text-blue-600/80 dark:text-blue-500/80'>
               Quality Assurance:
-            </b>{" "}
+            </b>{' '}
             Our commitment to delivering high-quality software ensures that your
             project meets the highest standards.
           </p>
@@ -67,8 +67,6 @@ const Company = () => {
         </p>
       </div>
       <ProfileCard />
-      {/* <ProfileCard /> */}
-      {/* <Profilecard /> */}
     </Bounded>
   );
 };
