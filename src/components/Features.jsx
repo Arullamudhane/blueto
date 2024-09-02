@@ -1,56 +1,56 @@
-import { useGSAP } from "@gsap/react";
-import React, { useRef } from "react";
-import { animateWithGsap } from "../utils/animation";
-import "./Features.css";
+import { useGSAP } from '@gsap/react';
+import React, { useRef } from 'react';
+import { animateWithGsap } from '../utils/animation';
+import './Features.css';
 
-import { useEffect } from "react";
-import gsap from "gsap";
-import { dots } from "../assets";
-import AnimatedCounter from "./AnimatedCounter";
-import SwingImage from "../pages/SwingImage";
-import AgileCard from "./AgileCard";
-import Button from "./Button";
+import { useEffect } from 'react';
+import gsap from 'gsap';
+import { dots } from '../assets';
+import AnimatedCounter from './AnimatedCounter';
+import SwingImage from '../pages/SwingImage';
+import AgileCard from './AgileCard';
+import Button from './Button';
 
 const Features = () => {
   let agileCards = [
     {
-      color: "bg-indigo-500",
-      title: "Connect with us",
-      subTitle: "Welcome abord",
+      color: 'bg-indigo-500',
+      title: 'Connect with us',
+      subTitle: 'Welcome abord',
     },
     {
-      color: "bg-pink-700",
-      title: "BrainStorm Your Idea",
-      subTitle: "Lets do a research",
+      color: 'bg-pink-700',
+      title: 'BrainStorm Your Idea',
+      subTitle: 'Lets do a research',
     },
     {
-      color: "bg-orange-600",
-      title: "Get Your team",
-      subTitle: "Welcome CEO",
+      color: 'bg-orange-600',
+      title: 'Get Your team',
+      subTitle: 'Welcome CEO',
     },
     {
-      color: "bg-lime-700",
-      title: "Create Product",
-      subTitle: "Great!",
+      color: 'bg-lime-700',
+      title: 'Create Product',
+      subTitle: 'Great!',
     },
   ];
   useGSAP(() => {
     animateWithGsap(
-      ".g_box",
+      '.g_box',
       // { rotation: 360, x: 1, duration: 1,  }
-      { y: 0, scale: 1, opacity: 1, ease: "power1" },
+      { y: 0, scale: 1, opacity: 1, ease: 'power1' },
       { scrub: 5.5 }
     );
-    animateWithGsap("#features_title", { y: 0, opacity: 1 });
+    animateWithGsap('#features_title', { y: 0, opacity: 1 });
     animateWithGsap(
-      ".g_grow",
-      { scale: 1, opacity: 1, ease: "power1" },
+      '.g_grow',
+      { scale: 1, opacity: 1, ease: 'power1' },
       { scrub: 5.5 }
     );
-    animateWithGsap(".g_text", {
+    animateWithGsap('.g_text', {
       y: 0,
       opacity: 1,
-      ease: "power2.inOut",
+      ease: 'power2.inOut',
       duration: 1,
     });
     // animateWithGsap(".g_box", {
@@ -77,7 +77,7 @@ const Features = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             // Add the animation class when the element is visible
-            element.classList.add("animate-lineGrow");
+            element.classList.add('animate-lineGrow');
             // Stop observing after animation starts
             observer.unobserve(element);
           }
@@ -139,20 +139,20 @@ const Features = () => {
               </p>
               <p className='feature-text g_text'>
                 <p className='text-gradient my-4 text-[1.7rem] font-semibold'>
-                  Why Choose Blueto? Expertise:{" "}
+                  Why Choose Blueto? Expertise:{' '}
                 </p>
                 Our team comprises skilled professionals with in-depth knowledge
                 of the latest technologies. Custom Solutions: We understand that
                 every business is unique. Our solutions are tailor-made to fit
                 your specific requirements. Quality Assurance: Our commitment to
                 delivering high-quality software ensures that your project meets
-                the highest standards.{" "}
+                the highest standards.{' '}
                 <span className='text-white '>
                   <b>
                     <br />
                     ALL THE PROJECTS WILL BE KEPT AS SECRETS.
                   </b>
-                </span>{" "}
+                </span>{' '}
               </p>
               {/* <div className=' md:flex flex-row items-center justify-around hidden mt-20'>
                 <div className='g_box   hidden md:flex w-36 h-40 md:w-64 md:h-64 border-2  items-center justify-center rounded-2xl '>
@@ -190,8 +190,9 @@ const Features = () => {
         {/* Agile-------- */}
 
         <div
-          className='relative flex  flex-col justify-between   items-center border-2
-         border-zinc-800/50 rounded-2xl shadow-inner p-2 md:p-10'
+          className='relative flex  flex-col justify-between  
+           items-center border-2
+         border-zinc-800/50 rounded-2xl shadow-inner p-2 md:p-10 '
         >
           <div className='absolute inset-0 flex justify-center  mr-[16.5rem] md:mr-[19rem] lg:mr-[19rem]  '>
             <div
@@ -204,9 +205,13 @@ const Features = () => {
           ))}
         </div>
         {/* Counter ------------ */}
-        <div className=' grid grid-rows-2 gap-y-10 items-center justify-center'>
-          <AnimatedCounter />
-          <SwingImage />
+        <div className=' grid grid-rows-2  gap-y-10 items-center justify-center'>
+          <div>
+            <AnimatedCounter />
+          </div>
+          <div>
+            <SwingImage />
+          </div>
         </div>
       </div>
       {/* countr */}
