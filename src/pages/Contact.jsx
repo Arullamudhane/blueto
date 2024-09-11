@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
-import emailjs from '@emailjs/browser';
-import Bounded from '../components/Bounded';
-import EarthCanvas from '../components/EarthCanvas';
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+import Bounded from "../components/Bounded";
+import EarthCanvas from "../components/EarthCanvas";
+import sendMailf from "../services/emailServices";
 
 const Contact = () => {
   const [form, setForm] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
   const [loading, setLoading] = useState(false);
   const handleChange = (event) => {
@@ -17,35 +18,37 @@ const Contact = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     setLoading(true);
-    emailjs
-      .send(
-        'service_z41m4bq',
-        'template_n2q8mvi',
-        {
-          from_name: form.name,
-          to_name: 'Arullamudhane',
-          from_email: form.email,
-          to_email: 'lcarull33@gmail.com',
-          message: form.message,
-        },
-        'HQiJMRf2XAhnldRGX'
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert('Thank you. I will get back to you as soon as possible');
-          setForm({
-            name: '',
-            email: '',
-            message: '',
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.log(error);
-          alert('Something went wrong');
-        }
-      );
+    // emailjs
+    //   .send(
+    //     'service_z41m4bq',
+    //     'template_n2q8mvi',
+    //     {
+    //       from_name: form.name,
+    //       to_name: 'Arullamudhane',
+    //       from_email: form.email,
+    //       to_email: 'lcarull33@gmail.com',
+    //       message: form.message,
+    //     },
+    //     'HQiJMRf2XAhnldRGX'
+    //   )
+    // sendMailf();
+
+    // sendMailf().then(
+    //   () => {
+    //     setLoading(false);
+    //     alert("Thank you. I will get back to you as soon as possible");
+    //     setForm({
+    //       name: "",
+    //       email: "",
+    //       message: "",
+    //     });
+    //   },
+    //   (error) => {
+    //     setLoading(false);
+    //     console.log(error);
+    //     alert("Something went wrong");
+    //   }
+    // );
   };
   return (
     <Bounded>
@@ -91,7 +94,7 @@ const Contact = () => {
               type='submit'
               className='bg-white px-8 py-3 shadow-md w-fit font-bold rounded-md outline-none'
             >
-              {loading ? 'Sending...' : 'Send'}
+              {loading ? "Sending..." : "Send"}
             </button>
           </form>
         </div>

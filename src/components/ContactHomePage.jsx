@@ -15,8 +15,7 @@ const ContactHomePage = () => {
         </h1>
         <NavLink
           to='/contact'
-          className='px-4 py-2 text-md
-         text-slate-100 bg-blue-800 md:text-2xl  rounded-lg  '
+          className='px-4 py-2 text-md text-slate-100 bg-blue-800 md:text-2xl md:px-6 md:py-3 rounded-lg text-center'
         >
           Contact Us
         </NavLink>

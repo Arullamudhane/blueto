@@ -138,6 +138,12 @@ code {
 }
 
 
+p::selection , b::selection, h1::selection, div::selection, span::selection , h2::selection{
+  background: rgb(209, 209, 209);
+  color: rgb(254, 0, 254);
+}
+
+
 
 .cards {
   display: flex;

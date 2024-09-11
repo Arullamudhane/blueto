@@ -1,50 +1,57 @@
-import { arull3, loguone, arull2 } from '../assets';
-import { logutwo } from '../assets';
+import { arull3, loguone, arull2 } from "../assets";
+import { logutwo } from "../assets";
 
 const ProfileCard = () => {
   const profiles = [
     {
-      name: 'V.Loganathan',
-      position: 'Executive Director',
+      name: "V.Loganathan",
+      position: "Executive Director",
       experience:
-        '33 years of experience as a Development Officer in the marketing field at LIC',
-      desc: 'Strategic planning, and effective marketing strategies. Highly skilled in building strong client relationships and driving business growth.',
+        "33 years of experience as a Development Officer in the marketing field at LIC",
+      desc: "Strategic planning, and effective marketing strategies. Highly skilled in building strong client relationships and driving business growth.",
       photo: loguone,
-      linkedin: 'https://www.linkedin.com/in/loganathan-v/',
-      gmail: 'vaithilogu@gmail',
+      linkedin: "https://www.linkedin.com/in/loganathan-v/",
+      gmail: "vaithilogu@gmail",
+      online: true,
     },
     {
-      name: 'L.C.Arullamudhane',
-      position: 'Technical Lead',
+      name: "L.C.Arullamudhane",
+      position: "Technical Lead",
       experience:
         "6 years of Experience as Fullstack Software Developer at MNC's",
-      desc: 'Expert in full stack development, specializing in managing the tech domain of a company. Skilled in delivering end-to-end software solutions and overseeing comprehensive technology strategies from inception to deployment.',
+      desc: "Expert in full stack development, specializing in managing the tech domain of a company. Skilled in delivering end-to-end software solutions and overseeing comprehensive technology strategies from inception to deployment.",
       photo: arull3,
-      linkedin: 'https://www.linkedin.com/in/lcarull/',
-      gmail: 'arullamudhanelc@myblueto.com',
+      linkedin: "https://www.linkedin.com/in/lcarull/",
+      gmail: "arullamudhanelc@myblueto.com",
+      online: false,
     },
   ];
   return (
     <div className='flex flex-col md:flex-row space-x-0 space-y-10 md:space-x-10 md:space-y-0 p-2 md:p-10 '>
       {profiles.map((profile) => (
-        <div class='flex-1 rounded-lg border bg-white px-1 pt-8 pb-10 shadow-lg'>
+        <div class='flex-1 rounded-lg border bg-white px-3 pt-8 pb-10 shadow-lg'>
           <div class='relative mx-auto w-36 rounded-full '>
-            <span class='absolute right-0 m-3 h-3 w-3 rounded-full bg-green-500 ring-2 ring-green-300 ring-offset-2'></span>
+            {profile.online && (
+              <span class='absolute right-0 m-7  mr-[30px] h-3 w-3 rounded-full bg-green-500 ring-2 ring-green-300 ring-offset-2'></span>
+            )}
             <img
               class='mx-auto h-auto w-full rounded-full'
               src={profile.photo}
               alt=''
             />
           </div>
-          <h1 class='my-1 text-center text-xl font-bold leading-8 text-gray-900'>
+          <h1 class='my-1 text-center text-xl font-extrabold leading-8 '>
             {profile.name}
           </h1>
-          <h3 class='font-lg text-semibold text-center leading-6 text-gray-600'>
+          {/* <h3 class='font-lg text-extrabold text-center leading-6 text-gray-600'> */}
+          <h3 class='text-center font-bold text-gray-900 dark:text-white text-[rgb(74,106,197)]'>
             {profile.position}
           </h3>
-          <p class='text-center text-sm leading-6 text-gray-500 hover:text-gray-600'>
+          <p class='text-center  font-[100px] mb-[4px] text-sm leading-6 text-gray-500 text-[rgb(74,106,197)]'>
             {profile.experience}
-            <br /> {profile.desc}
+          </p>
+          <p class='text-center text-sm leading-6 text-[rgb(12 32 89)]  '>
+            {profile.desc}
           </p>
           {/* <ul class='mt-3 divide-y rounded bg-gray-100 py-2 px-3 text-gray-600 shadow-sm hover:text-gray-700 hover:shadow'>
             <li class='flex items-center py-3 text-sm'>
@@ -108,7 +115,7 @@ const ProfileCard = () => {
                 >
                   <title>LinkedIn</title>
                   <path d='M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z'></path>
-                </svg>{' '}
+                </svg>{" "}
               </a>
             </li>
           </ul>

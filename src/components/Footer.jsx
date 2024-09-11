@@ -1,28 +1,28 @@
-import clsx from 'clsx';
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import Bounded from './Bounded';
+import clsx from "clsx";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import Bounded from "./Bounded";
 
-import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa6';
+import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa6";
 
 export default function Footer() {
   const links = [
     {
-      to: '/company',
-      link: 'company',
+      to: "/company",
+      link: "company",
     },
     {
-      to: '/products',
-      link: 'products',
+      to: "/products",
+      link: "products",
     },
     {
-      to: '/services',
-      link: 'services',
+      to: "/services",
+      link: "services",
     },
   ];
   return (
     <Bounded as='footer' className='text-slate-600'>
-      <div className='container mx-auto mt-20 md:mt-4 flex flex-col items-center justify-between gap-6 py-8 sm:flex-row '>
+      <div className='container mx-auto mt-2 md:mt-4 flex flex-col items-center justify-between gap-6 py-8 sm:flex-row '>
         <div className='name flex flex-col items-center justify-center gap-x-4 gap-y-2 sm:flex-row sm:justify-self-start'>
           <NavLink
             to='/'
@@ -43,7 +43,7 @@ export default function Footer() {
                   <NavLink
                     to={to}
                     className={clsx(
-                      'group relative block overflow-hidden  rounded px-3 py-1 text-lg font-normal text-slate-100 transition-colors duration-150 hover:text-pink-700'
+                      "group relative block overflow-hidden  rounded px-3 py-1 text-lg font-normal text-slate-100 transition-colors duration-150 hover:text-pink-700"
                     )}
                   >
                     {link}

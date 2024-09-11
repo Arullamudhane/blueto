@@ -77,7 +77,7 @@ const ProductsList = ({ products }) => {
   }, [hovering, currentItem]);
   const productImages = products.map((product, index) => {
     const image = product.image;
-    console.log(image);
+    // console.log(image);
     return image;
   });
   const handleMouseEnter = (index) => {
@@ -108,7 +108,7 @@ const ProductsList = ({ products }) => {
                   {product.title}
                 </span>
                 <div className='flex flex-col md:flex-row gap-10 '>
-                  <div className=' prose  prose-lg prose-stone mt-5  text-gray-200 w-full  md:w-2/3 mx-auto'>
+                  <div className='prose prose-lg prose-stone mt-5 text-gray-200 w-full mx-auto  md:w-[600px]'>
                     <p>
                       {product.description.length > 0
                         ? product.description
@@ -135,15 +135,15 @@ const ProductsList = ({ products }) => {
                   </div>
                 </div>
               </div>
-              <span className='ml-auto flex items-center gap-2 text-xl  font-medium md:mr-10 cursor-pointer z-20'>
+              {/* <span className='ml-auto flex items-center gap-2 text-xl  font-medium md:mr-10 cursor-pointer z-20'>
                 <IoIosArrowDropright />
-              </span>
+              </span> */}
             </div>
           </li>
         ))}
       </ul>
       <div
-        className='hover-reveal pointer-events-none absolute  left-0 top-0  h-[320px] w-[220px] rounded-lg  z-10 opacity-100 bg-cover bg-center transition-[background] duration-300' //bg-cover bg-center
+        className='hover-reveal pointer-events-none absolute  left-0 top-0  h-[320px] md:w-[200px] rounded-lg  z-10 opacity-100 bg-cover bg-center transition-[background] duration-300 ' //bg-cover bg-center
         style={{
           backgroundImage:
             currentItem !== null ? `url(${productImages[currentItem]})` : "",
