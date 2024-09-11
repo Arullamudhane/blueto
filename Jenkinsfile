@@ -24,12 +24,16 @@ pipeline {
             }
         }
 
-         steps {
-            echo "Pushing the image to Docker Hub"
-            withCredentials([usernamePassword(credentialsId: 'dockerHub', passwordVariable: 'dockerHubPass', usernameVariable: 'dockerHubUser')]) {
-                sh "docker tag my-react-ui1 ${env.dockerHubUser}/my-react-ui:latest"
-                sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPass}"
-                sh "docker push ${env.dockerHubUser}/my-react-ui:latest"
+        stage('Push Docker Image to Docker Hub') {
+            steps {
+                script {
+                    echo "Pushing the image to Docker Hub..."
+                    withCredentials([usernamePassword(credentialsId: 'dockerHub', passwordVariable: 'dockerHubPass', usernameVariable: 'dockerHubUser')]) {
+                        sh "docker tag ${DOCKER_IMAGE} ${env.dockerHubUser}/my-react-ui:latest"
+                        sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPass}"
+                        sh "docker push ${env.dockerHubUser}/my-react-ui:latest"
+                    }
+                }
             }
         }
 
