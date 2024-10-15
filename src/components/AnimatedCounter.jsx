@@ -12,8 +12,8 @@ const AnimatedCounter = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            let start = 0;
-            const end = 15;
+            let start = 10;
+            const end = 75;
             const duration = 2000; // Duration of animation in milliseconds
             const stepTime = 50; // Time between steps in milliseconds
             const steps = duration / stepTime;
